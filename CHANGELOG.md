@@ -1,5 +1,13 @@
 # utils
 
+## 0.0.4
+
+### Patch Changes
+
+- 38cf5da: update workflow
+- 30f2957: add remove
+- 30e4259: update release workflow
+
 ## 0.0.3
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "@jsparkdev/utils",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "sideEffects": false,
   "packageManager": "pnpm@9.14.4",
   "main": "./dist/index.js",
