@@ -1,5 +1,11 @@
 # utils
 
+## 0.0.8
+
+### Patch Changes
+
+- 6e11f9c: update workflow
+
 ## 0.0.7
 
 ### Patch Changes
