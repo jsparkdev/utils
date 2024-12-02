@@ -29,10 +29,6 @@ jobs:
         uses: changesets/action@v1
         with:
           createGithubReleases: false
-          version: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && 'pnpm changeset version' || '' }}
-          publish: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && 'pnpm changeset publish' || '' }}
-          commit: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && '[ci] release' || '' }}
-          title: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && '[ci] release' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
