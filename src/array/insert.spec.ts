@@ -20,16 +20,16 @@ describe("insert", () => {
     expect(objects).toEqual([{ id: 1 }, { id: 3 }, { id: 2 }]);
   });
 
-  it("can't insert at negative index - adds to end", () => {
+  it("can't insert at negative index", () => {
     const numbers = [1, 2];
     insert(numbers, -1, 3);
-    expect(numbers).toEqual([1, 2, 3]);
+    expect(numbers).toEqual([1, 2]);
   });
 
-  it("can't insert past end - adds to end", () => {
+  it("can't insert past end", () => {
     const numbers = [1, 2];
     insert(numbers, 5, 3);
-    expect(numbers).toEqual([1, 2, 3]);
+    expect(numbers).toEqual([1, 2]);
   });
 });
 
@@ -55,17 +55,17 @@ describe("inserted", () => {
     expect(objects).toEqual([{ id: 1 }, { id: 2 }]);
   });
 
-  it("can't insert at negative index - adds to end", () => {
+  it("can't insert at negative index", () => {
     const numbers = [1, 2];
     const result = inserted(numbers, -1, 3);
-    expect(result).toEqual([1, 2, 3]);
+    expect(result).toEqual([1, 2]);
     expect(numbers).toEqual([1, 2]);
   });
 
-  it("can't insert past end - adds to end", () => {
+  it("can't insert past end", () => {
     const numbers = [1, 2];
     const result = inserted(numbers, 5, 3);
-    expect(result).toEqual([1, 2, 3]);
+    expect(result).toEqual([1, 2]);
     expect(numbers).toEqual([1, 2]);
   });
 });
