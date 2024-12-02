@@ -1,5 +1,13 @@
 # utils
 
+## 0.0.5
+
+### Patch Changes
+
+- 8a3a004: update insert
+- f093ebd: update workflow
+- 28a4e2a: update release workflows
+
 ## 0.0.4
 
 ### Patch Changes
