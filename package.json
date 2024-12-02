@@ -22,7 +22,8 @@
     "typecheck": "tsc --noEmit",
     "prepare": "husky install",
     "prepublishOnly": "pnpm build",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "release": "changeset publish"
   },
   "keywords": [
     "typescript",
