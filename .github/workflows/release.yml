@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Update versions and publish'
+        description: "Update versions and publish"
         type: boolean
         required: true
         default: false
@@ -28,6 +28,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          createGithubReleases: false
           version: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && 'pnpm changeset version' || '' }}
           publish: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && 'pnpm changeset publish' || '' }}
           commit: ${{ github.event_name == 'workflow_dispatch' && inputs.version == 'true' && '[ci] release' || '' }}
