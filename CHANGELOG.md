@@ -1,5 +1,11 @@
 # utils
 
+## 0.0.2
+
+### Patch Changes
+
+- 5793474: update package name with scope
+
 ## 0.0.1
 
 ### Patch Changes
