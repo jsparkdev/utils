@@ -1,5 +1,11 @@
 # utils
 
+## 0.0.6
+
+### Patch Changes
+
+- 05a73e7: update package.json
+
 ## 0.0.5
 
 ### Patch Changes
