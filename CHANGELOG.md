@@ -1,5 +1,11 @@
 # utils
 
+## 0.0.12
+
+### Patch Changes
+
+- 983656a: update tsup config
+
 ## 0.0.11
 
 ### Patch Changes
