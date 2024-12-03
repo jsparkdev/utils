@@ -33,13 +33,13 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "^2.27.10",
-    "@vitest/coverage-v8": "^2.1.7",
+    "@vitest/coverage-v8": "^2.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "rimraf": "^6.0.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.7"
+    "vitest": "^2.1.8"
   },
   "funding": "https://github.com/sponsors/jsparkdev",
   "repository": {
