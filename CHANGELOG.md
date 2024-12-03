@@ -1,5 +1,13 @@
 # utils
 
+## 0.0.9
+
+### Patch Changes
+
+- ff10dbf: add test case for isAlphabet
+- 326932a: remove inserted, removed function
+- 1e54a51: add isAlphabet
+
 ## 0.0.8
 
 ### Patch Changes
