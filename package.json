@@ -25,7 +25,9 @@
     "prepublishOnly": "pnpm build"
   },
   "keywords": [
+    "javascript",
     "typescript",
+    "esm",
     "utility"
   ],
   "author": "Junseong Park <to@jspark.dev>",
