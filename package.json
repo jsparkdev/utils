@@ -12,6 +12,10 @@
     "./string": {
       "types": "./dist/string/index.d.ts",
       "import": "./dist/string/index.js"
+    },
+    "./object": {
+      "types": "./dist/object/index.d.ts",
+      "import": "./dist/object/index.js"
     }
   },
   "scripts": {
