@@ -1,5 +1,15 @@
 # utils
 
+## 0.0.10
+
+### Patch Changes
+
+- 10b2f6d: add object - filter, map
+- 8bdf8d1: update isAlphabet
+- fb77f5d: subpath only
+- 47f90a7: update insert, remove
+- 8ebbf06: update insert
+
 ## 0.0.9
 
 ### Patch Changes
