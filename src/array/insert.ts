@@ -1,19 +1,20 @@
 /**
  * Creates a new array with a value inserted at the specified index.
- * If the index is out of bounds, returns the original array unchanged.
- * 
+ * If the index is out of bounds, returns a copy of the original array.
+ *
  * @template T - The type of elements in the array
- * @param {Array<T>} array - The source array
+ * @param {T[]} array - The source array
  * @param {number} index - The index position to insert at (0-based)
  * @param {T} item - The value to insert
- * @returns {Array<T>} A new array with the inserted value, or the original array if index is out of bounds
+ * @returns {T[]} A new array with the specified value inserted at the given index. 
+ * Returns a copy of the original array if the index is out of bounds.
  * @example
  * insert([1,2,3], 1, 4) // returns [1,4,2,3]
- * insert([1,2,3], -1, 4) // returns [1,2,3] 
+ * insert([1,2,3], -1, 4) // returns [1,2,3]
  */
 function insert<T>(array: T[], index: number, item: T): T[] {
   if (index < 0 || index >= array.length) {
-    return array;
+    return [...array];
   }
 
   const result = new Array(array.length + 1);
