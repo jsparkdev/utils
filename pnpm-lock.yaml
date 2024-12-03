@@ -17,6 +17,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^2.1.8
         version: 2.1.8(vitest@2.1.8)
+      glob:
+        specifier: ^11.0.0
+        version: 11.0.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7

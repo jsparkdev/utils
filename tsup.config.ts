@@ -1,7 +1,10 @@
 import { defineConfig } from "tsup";
+import { glob } from "glob";
+
+const entries = glob.sync("src/*/index.ts");
 
 export default defineConfig({
-  entry: ["src/array/index.ts", "src/string/index.ts", "src/string/index.ts"],
+  entry: entries,
   format: ["esm"],
   dts: true,
   splitting: true,
