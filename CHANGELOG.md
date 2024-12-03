@@ -1,5 +1,11 @@
 # utils
 
+## 0.0.11
+
+### Patch Changes
+
+- 50db1dc: update tsup config
+
 ## 0.0.10
 
 ### Patch Changes
