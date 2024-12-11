@@ -1,3 +1,3 @@
 # utils
 
-A collection of useful utility functions specific to ESM
+useful utilities for JavaScript and TypeScript

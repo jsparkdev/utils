@@ -5,7 +5,7 @@ const entries = glob.sync("src/*/index.ts");
 
 export default defineConfig({
   entry: entries,
-  format: ["esm"],
+  format: ["esm", "cjs"],
   dts: true,
   splitting: true,
   sourcemap: true,
