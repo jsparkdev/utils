@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsparkdev/utils.git"
+    "url": "git+https://github.com/jsparkdev/utils.git"
   },
   "author": "Junseong Park <to@jspark.dev>",
   "funding": "https://github.com/sponsors/jsparkdev",
