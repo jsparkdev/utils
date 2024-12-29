@@ -1,6 +1,6 @@
 {
   "name": "@jsparkdev/utils",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "packageManager": "pnpm@9.15.2",
   "description": "A lightweight, type-safe JavaScript utility library tailored for modern workflows",
   "license": "MIT",
