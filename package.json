@@ -1,9 +1,22 @@
 {
   "name": "@jsparkdev/utils",
-  "type": "module",
   "version": "0.0.12",
+  "packageManager": "pnpm@9.15.2",
+  "description": "A lightweight, type-safe JavaScript utility library tailored for modern workflows",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsparkdev/utils.git"
+  },
+  "author": "Junseong Park <to@jspark.dev>",
+  "funding": "https://github.com/sponsors/jsparkdev",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
   "sideEffects": false,
-  "packageManager": "pnpm@9.15.0",
   "exports": {
     "./array": {
       "types": "./dist/array/index.d.ts",
@@ -20,51 +33,27 @@
   },
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
     "clean": "rimraf dist",
+    "format": "biome format . --write",
     "lint": "biome lint . --write",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm clean && pnpm build"
   },
   "keywords": [
     "javascript",
-    "typescript",
-    "esm",
-    "utility"
+    "typescript"
   ],
-  "author": "Junseong Park <to@jspark.dev>",
-  "description": "utility functions",
-  "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "^2.27.10",
     "@vitest/coverage-v8": "^2.1.8",
     "glob": "^11.0.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
     "rimraf": "^6.0.1",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
-  "funding": "https://github.com/sponsors/jsparkdev",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jsparkdev/utils.git"
-  },
-  "lint-staged": {
-    "*": [
-      "biome lint . --write"
-    ]
-  },
   "publishConfig": {
     "access": "public"
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ]
+  }
 }

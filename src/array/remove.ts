@@ -13,21 +13,21 @@
  * remove([1,2], 5) // returns [1,2]
  */
 function remove<T>(array: T[], index: number): T[] {
-  if (index < 0 || index >= array.length) {
-    return [...array];
-  }
+	if (index < 0 || index >= array.length) {
+		return [...array];
+	}
 
-  const result = new Array(array.length - 1);
+	const result = new Array(array.length - 1);
 
-  for (let i = 0; i < index; i++) {
-    result[i] = array[i];
-  }
+	for (let i = 0; i < index; i++) {
+		result[i] = array[i];
+	}
 
-  for (let i = index + 1; i < array.length; i++) {
-    result[i - 1] = array[i];
-  }
+	for (let i = index + 1; i < array.length; i++) {
+		result[i - 1] = array[i];
+	}
 
-  return result;
+	return result;
 }
 
 export { remove };

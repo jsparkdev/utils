@@ -11,18 +11,21 @@
  * // Result: { name: 'name_John', age: 'age_30' }
  */
 export function map<T extends object, R>(
-  obj: T,
-  transform: (params: { key: keyof T; value: T[keyof T] }) => R
+	obj: T,
+	transform: (params: { key: keyof T; value: T[keyof T] }) => R,
 ): Record<keyof T, R> {
-  if (!obj || typeof obj !== "object") {
-    throw new TypeError("First argument must be an object");
-  }
+	if (!obj || typeof obj !== "object") {
+		throw new TypeError("First argument must be an object");
+	}
 
-  return Object.entries(obj).reduce((acc, [key, value]) => {
-    acc[key as keyof T] = transform({
-      key: key as keyof T,
-      value: value as T[keyof T],
-    });
-    return acc;
-  }, {} as Record<keyof T, R>);
+	return Object.entries(obj).reduce(
+		(acc, [key, value]) => {
+			acc[key as keyof T] = transform({
+				key: key as keyof T,
+				value: value as T[keyof T],
+			});
+			return acc;
+		},
+		{} as Record<keyof T, R>,
+	);
 }

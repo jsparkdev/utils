@@ -1,15 +1,15 @@
 type PredicateFunction<T> = (value: T) => boolean;
 
 type Predicate<T extends object> = {
-  key?: PropertyKey | PredicateFunction<PropertyKey>;
-  value?: T[keyof T] | PredicateFunction<T[keyof T]>;
+	key?: PropertyKey | PredicateFunction<PropertyKey>;
+	value?: T[keyof T] | PredicateFunction<T[keyof T]>;
 };
 
 /**
  * Type guard for checking if a value is a predicate function
  */
 function isPredicate<T>(value: unknown): value is PredicateFunction<T> {
-  return typeof value === "function";
+	return typeof value === "function";
 }
 
 /**
@@ -35,29 +35,32 @@ function isPredicate<T>(value: unknown): value is PredicateFunction<T> {
  * }) // { b: 2 }
  */
 export function filter<T extends object>(
-  obj: T,
-  predicates: Predicate<T>
+	obj: T,
+	predicates: Predicate<T>,
 ): Partial<T> {
-  if (!obj || typeof obj !== "object") {
-    throw new TypeError("First argument must be an object");
-  }
+	if (!obj || typeof obj !== "object") {
+		throw new TypeError("First argument must be an object");
+	}
 
-  return Object.entries(obj).reduce((acc, [key, value]) => {
-    const keyMatches =
-      !predicates.key ||
-      (isPredicate<PropertyKey>(predicates.key)
-        ? predicates.key(key)
-        : key === String(predicates.key));
+	return Object.entries(obj).reduce(
+		(acc, [key, value]) => {
+			const keyMatches =
+				!predicates.key ||
+				(isPredicate<PropertyKey>(predicates.key)
+					? predicates.key(key)
+					: key === String(predicates.key));
 
-    const valueMatches =
-      !predicates.value ||
-      (isPredicate<T[keyof T]>(predicates.value)
-        ? predicates.value(value as T[keyof T])
-        : value === predicates.value);
+			const valueMatches =
+				!predicates.value ||
+				(isPredicate<T[keyof T]>(predicates.value)
+					? predicates.value(value as T[keyof T])
+					: value === predicates.value);
 
-    if (keyMatches && valueMatches) {
-      acc[key as keyof T] = value as T[keyof T];
-    }
-    return acc;
-  }, {} as Partial<T>);
+			if (keyMatches && valueMatches) {
+				acc[key as keyof T] = value as T[keyof T];
+			}
+			return acc;
+		},
+		{} as Partial<T>,
+	);
 }
